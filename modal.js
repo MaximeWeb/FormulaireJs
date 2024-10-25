@@ -95,24 +95,24 @@ const validate = (event) => {
         }
         break;
 
-      case 'birthdate':
-        if (value === "") {
-          showError(birthdate, "Veuillez entrer votre date de naissance.");
-          isValid = false;
-        } else {
-          hideError(birthdate);
-        }
-        break;
-
-      case 'quantity':
-        if (value.trim() === "") {  
-          showError(quantity, "Veuillez renseigné le nombre de tournois auquel vous avez participé.");
-          isValid = false;
-        } else {
-          hideError(quantity);
-        }
-        break;
-        
+        case 'birthdate':
+          const birthDateValue = new Date(value);       // crée une constante qui prend un format de date , et getTime pour verifié que la date est bien valide (+1970)
+          if (value === "" || isNaN(birthDateValue.getTime())) {
+              showError(birthdate, "Veuillez entrer une date de naissance valide.");
+              isValid = false;
+          } else {
+              hideError(birthdate);
+          }
+          break;
+      
+      case 'quantity':                         // Gere le cas ou c'est bien un number entier.
+          if (value.trim() === "" || isNaN(value) || parseInt(value) < 0) {
+              showError(quantity, "Veuillez renseigner un nombre valide pour le nombre de tournois.");
+              isValid = false;
+          } else {
+              hideError(quantity);
+          }
+          break;
        
       default:
         break;
