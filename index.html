@@ -24,7 +24,7 @@
       <a href="#"><span>À propos</span></a>
       <a href="#"><span>Contact</span></a>
       <a href="#"><span>Évènements passés</span></a>
-      <a href="javascript:void(0);" class="icon" onclick="editNav()">
+      <a href="javascript:void(0);" class="icon">
         <i class="fa fa-bars"></i>
       </a>
     </div>
@@ -52,7 +52,7 @@
           je m'inscris
         </button>
       </div>
-        <div class="validated"><p>Votre formulaire a été envoyé avec succès !</p> <span class="closeValidated">X</span></div>
+       
       <div class="bground">
         <div class="content">
           <span class="close"></span>
@@ -62,7 +62,6 @@
               name="reserve"
               action="index.html"  
               method="get"
-              onsubmit="return validate(event);"
             >
               <div
                 class="formData">
@@ -188,7 +187,7 @@
                   type="checkbox"
                   name="conditions"
                   id="checkbox1"
-                  checked
+                 
                  
                 />
                 <label class="checkbox2-label" for="checkbox1"  required >
@@ -210,6 +209,7 @@
                 value="C'est parti"
               />
             </form>
+            <div class="validated" style="display : none"><p>Votre formulaire a été envoyé avec succès !</p></div>
           </div>
         </div>
       </div>
