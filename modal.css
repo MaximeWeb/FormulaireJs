@@ -172,7 +172,7 @@ main {
   overflow: auto;
   background-color: rgba(26, 39, 156, 0.4);
 }
-.validated {
+/* .validated {
   display: none;
   position: fixed;
   z-index: 2;
@@ -180,7 +180,7 @@ main {
   top: 0;
   width: 100%;
   overflow: auto;
-}
+} */
 
 .validated p {
   color: #279e7a;
